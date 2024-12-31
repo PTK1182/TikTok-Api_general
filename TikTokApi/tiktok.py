@@ -429,7 +429,6 @@ class TikTokApi:
                 # we'll try to read it from cookies
                 cookies = await self.get_session_cookies(session)
                 ms_token = cookies.get("msToken")
-                print(ms_token)
                 if ms_token is None:
                     self.logger.warn(
                         "Failed to get msToken from cookies, trying to make the request anyway (probably will fail)"
